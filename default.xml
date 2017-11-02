@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default revision="master" remote="origin" />
+  
+  <remote name="origin" fetch="git://github.com/techdoor" />
+  <remote name="yocto" fetch="git://git.yoctoproject.org" />
+
+  <project name="poky"
+	  revision="refs/heads/rocko" remote="yocto" />
+  <project name="meta-raspberrypi" 
+	   path="poky/meta-raspberrypi" remote="yocto" />
+</manifest>
