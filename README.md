@@ -9,17 +9,12 @@ $ chmod a+x ~/bin/repo
 ```
 $ mkdir WORKING_DIRECTORY
 $ cd WORKING_DIRECTORY
-$ repo init -u https://github.com/Techdoor/yocto-raspberrypi.git
+$ repo init -u https://github.com/mkilivan/yocto-raspberrypi.git
 $ repo sync
 ```
 ### Configure
 ```
 $ source oe-init-build-env 
-```
-Edit conf/local.conf file to add the following lines:
-```
-MACHINE ?= "raspberrypi3"
-ENABLE_UART = "1"
 ```
 Edit conf/bblayers.conf file. It should look like (Note: change absolute path to your home directory) 
 ```
