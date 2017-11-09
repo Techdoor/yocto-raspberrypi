@@ -19,13 +19,13 @@ $ source oe-init-build-env
 Edit conf/bblayers.conf file. It should look like (Note: change absolute path to your home directory) 
 ```
 BBLAYERS ?= " \
-  /home/murat/raspberryYocto/poky/meta \
-  /home/murat/raspberryYocto/poky/meta-poky \
-  /home/murat/raspberryYocto/poky/meta-openembedded/meta-oe \
-  /home/murat/raspberryYocto/poky/meta-openembedded/meta-multimedia \
-  /home/murat/raspberryYocto/poky/meta-openembedded/meta-networking \
-  /home/murat/raspberryYocto/poky/meta-openembedded/meta-python \
-  /home/murat/raspberryYocto/poky/meta-raspberrypi \
+  /path/to/poky/meta \
+  /path/to/poky/meta-poky \
+  /path/to/poky/meta-openembedded/meta-oe \
+  /path/to/poky/meta-openembedded/meta-multimedia \
+  /path/to/poky/meta-openembedded/meta-networking \
+  /path/to/poky/meta-openembedded/meta-python \
+  /path/to/poky/meta-raspberrypi \
   "
 ```
 ### Build
