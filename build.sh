@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir -p ~/dist
-cd ~/dist
+mkdir -p ~/shared/dist
+cd ~/shared/dist
 
 repo init -u https://github.com/mkilivan/yocto-raspberrypi.git
 repo sync
