@@ -1,0 +1,5 @@
+* Use TEMPLATECONF for bblayer.conf and local.conf
+  See https://github.com/resin-os/resin-raspberrypi/tree/master/layers/meta-resin-raspberrypi/conf/samples
+  Creating a Custom Template Configuration Directory in https://www.yoctoproject.org/docs/2.4.3/dev-manual/dev-manual.html
+
+
