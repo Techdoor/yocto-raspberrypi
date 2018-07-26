@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/mkilivan/yocto-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/yocto-raspberrypi)
+
 ### Install Repo
 ```
 $ mkdir ~/bin
