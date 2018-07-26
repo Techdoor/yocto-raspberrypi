@@ -42,7 +42,7 @@ USER build
 WORKDIR /home/build
 
 COPY build.sh /home/build
-COPY bblayers.conf /home/build
+COPY bblayers.conf.template /home/build
 COPY local.conf /home/build
 
 CMD ./build.sh
