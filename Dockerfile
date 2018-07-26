@@ -41,7 +41,6 @@ USER build
 
 COPY build.sh /
 
-#CMD "/bin/bash"
 CMD ./build.sh
 
 # EOF
