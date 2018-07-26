@@ -39,7 +39,11 @@ RUN apt-get install -y sudo
 
 USER build
 
-COPY build.sh /
+WORKDIR /home/build
+
+COPY build.sh /home/build
+COPY bblayers.conf /home/build
+COPY local.conf /home/build
 
 CMD ./build.sh
 
