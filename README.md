@@ -1,5 +1,8 @@
+### Build
 [![Build
 Status](https://travis-ci.org/mkilivan/yocto-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/yocto-raspberrypi)
+
+### Docker Image
 [![](https://images.microbadger.com/badges/image/mkilivan/yocto-build.svg)](https://microbadger.com/images/mkilivan/yocto-build
 "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/mkilivan/yocto-build.svg)](https://microbadger.com/images/mkilivan/yocto-build
