@@ -1,10 +1,15 @@
+IMAGE := image-builder-rpi
+
 default: build
 
 build:
-	docker build -t image-builder-rpi .
+	docker build -t $(IMAGE) .
 
 sd-image: build
-	docker run -ti --privileged -v $(shell pwd):/home/build/shared:Z -v ${HOME}/.gitconfig:/home/build/.gitconfig image-builder-rpi
+	docker run -ti --privileged -v $(shell pwd):/home/build/shared:Z -v ${HOME}/.gitconfig:/home/build/.gitconfig $(IMAGE) 
 
 shell: build
-	docker run -ti --privileged -v $(shell pwd):/home/build/shared:Z -v ${HOME}/.gitconfig:/home/build/.gitconfig image-builder-rpi bash
+	docker run -ti --privileged -v $(shell pwd):/home/build/shared:Z -v ${HOME}/.gitconfig:/home/build/.gitconfig $(IMAGE) bash
+
+push-image:
+	docker push $(IMAGE)
