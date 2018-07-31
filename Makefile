@@ -1,4 +1,7 @@
-IMAGE := image-builder-rpi
+USER := mkilivan
+REPO := image-builder-rpi
+
+IMAGE := $(USER)/$(REPO)
 
 default: build
 

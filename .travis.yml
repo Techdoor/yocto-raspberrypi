@@ -9,5 +9,5 @@ before_install:
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD --password-stdin;
-      make push-image mkilivan/yocto-build;
+      make push-image;
     fi
