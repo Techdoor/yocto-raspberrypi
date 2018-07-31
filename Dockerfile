@@ -41,10 +41,9 @@ USER build
 
 WORKDIR /home/build
 
-COPY build.sh /home/build
-COPY bblayers.conf.template /home/build
-COPY local.conf /home/build
+COPY scripts /home/build/scpripts
+COPY conf/ /home/build/conf
 
-CMD ./build.sh
+CMD ./scripts/build.sh
 
 # EOF
