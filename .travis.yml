@@ -10,6 +10,12 @@ before_install:
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD --password-stdin;
+      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
       make push-image;
     fi
+
+deploy:
+  provider: script
+  script: bash make push-image
+  on:
+    branch: master
