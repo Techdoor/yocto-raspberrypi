@@ -41,7 +41,7 @@ USER build
 
 WORKDIR /home/build
 
-COPY scripts /home/build/scpripts
+COPY scripts /home/build/scripts
 COPY conf/ /home/build/conf
 
 CMD ./scripts/build.sh
