@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default revision="rocko" remote="origin" />
+  
+  <remote name="origin" fetch="git://github.com/mkilivan" />
+  <remote name="yocto" fetch="git://git.yoctoproject.org" />
+  <remote name="oe" fetch="git://git.openembedded.org" />	
+
+  <project name="poky" remote="yocto" />
+  <project name="meta-raspberrypi" path="poky/meta-raspberrypi" remote="yocto" />
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" />
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" />
+  <project name="rpi-conf" revision="master" path="poky/build/conf"/>
+</manifest>
