@@ -1,5 +1,5 @@
 USER := mkilivan
-REPO := image-builder-rpi
+REPO := image-builder-raspberrypi
 
 IMAGE := $(USER)/$(REPO)
 

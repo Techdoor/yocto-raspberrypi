@@ -3,9 +3,9 @@
 Status](https://travis-ci.org/mkilivan/yocto-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/yocto-raspberrypi)
 
 ### Docker Image
-[![](https://images.microbadger.com/badges/image/mkilivan/image-builder-rpi.svg)](https://microbadger.com/images/mkilivan/image-builder-rpi
+[![](https://images.microbadger.com/badges/image/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
 "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/mkilivan/image-builder-rpi.svg)](https://microbadger.com/images/mkilivan/image-builder-rpi
+[![](https://images.microbadger.com/badges/version/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
 "Get your own version badge on microbadger.com")
 
 ### Install Repo
