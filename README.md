@@ -1,6 +1,6 @@
 ### Build
 [![Build
-Status](https://travis-ci.org/mkilivan/yocto-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/yocto-raspberrypi)
+Status](https://travis-ci.org/mkilivan/image-builder-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/image-builder-raspberrypi)
 
 ### Docker Image
 [![](https://images.microbadger.com/badges/image/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
@@ -19,7 +19,7 @@ $ chmod a+x ~/bin/repo
 ```
 $ mkdir WORKING_DIRECTORY
 $ cd WORKING_DIRECTORY
-$ repo init -u https://github.com/mkilivan/yocto-raspberrypi.git
+$ repo init -u https://github.com/mkilivan/image-builder-raspberrypi.git
 $ repo sync
 ```
 ### Configure
