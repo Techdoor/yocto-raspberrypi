@@ -42,10 +42,10 @@ BBLAYERS ?= " \
 ```
 ### Build
 ```
-$ bitbake rpi-hwup-image
+$ bitbake core-image-base
 ````
 ### Flash the image to SD card
 Assuming an SD card is attached as /dev/sdd, you can write the image to the card as follows:
 ```
-sudo dd if=./tmp/deploy/images/raspberrypi3/rpi-hwup-image-raspberrypi3.rpi-sdimg of=/dev/sdd
+sudo dd if=./tmp/deploy/images/raspberrypi2/core-image-base-raspberrypi2.rpi-sdimg of=/dev/sdd
 ```

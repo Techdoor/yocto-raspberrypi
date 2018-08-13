@@ -9,4 +9,4 @@ cd poky
 mkdir -p build/conf/
 sed 's?_BUILD_PATH_?'`pwd`'?' ~/conf/bblayers.conf.template > build/conf/bblayers.conf
 source oe-init-build-env 
-bitbake rpi-hwup-image
+bitbake core-image-base
