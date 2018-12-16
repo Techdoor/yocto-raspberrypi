@@ -35,7 +35,7 @@ BBLAYERS ?= " \
   /path/to/poky/meta-openembedded/meta-multimedia \
   /path/to/poky/meta-openembedded/meta-networking \
   /path/to/poky/meta-openembedded/meta-python \
-  /path/to/poky/meta-openembedded/meta-filesystem \
+  /path/to/poky/meta-openembedded/meta-filesystems \
   /path/to/poky/meta-virtualization \
   /path/to/poky/meta-raspberrypi \
   "
