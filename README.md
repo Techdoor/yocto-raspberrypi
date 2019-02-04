@@ -8,23 +8,27 @@ Status](https://travis-ci.org/mkilivan/image-builder-raspberrypi.svg?branch=mast
 [![](https://images.microbadger.com/badges/version/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
 "Get your own version badge on microbadger.com")
 
+### To Run the Docker Image
+```
+docker run -ti --volume=[host-src:]container-dest mkilivan/image-builder-raspberrypi
+```
 ### Install Repo
 ```
-$ mkdir ~/bin
-$ PATH=~/bin:$PATH
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-$ chmod a+x ~/bin/repo
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
 ```
 ### Download the Source
 ```
-$ mkdir WORKING_DIRECTORY
-$ cd WORKING_DIRECTORY
-$ repo init -u https://github.com/mkilivan/image-builder-raspberrypi.git
-$ repo sync
+mkdir WORKING_DIRECTORY
+cd WORKING_DIRECTORY
+repo init -u https://github.com/mkilivan/image-builder-raspberrypi.git
+repo sync
 ```
 ### Configure
 ```
-$ source oe-init-build-env 
+source oe-init-build-env 
 ```
 Edit conf/bblayers.conf file. It should look like (Note: change absolute path to your home directory) 
 ```
@@ -42,7 +46,7 @@ BBLAYERS ?= " \
 ```
 ### Build
 ```
-$ bitbake core-image-base
+bitbake core-image-base
 ````
 ### Flash the image to SD card
 Assuming an SD card is attached as /dev/sdd, you can write the image to the card as follows:
