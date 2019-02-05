@@ -12,6 +12,21 @@ Status](https://travis-ci.org/mkilivan/image-builder-raspberrypi.svg?branch=mast
 ```
 docker run -ti --volume=[host-src:]container-dest mkilivan/image-builder-raspberrypi
 ```
+#### Possible Issues
+Depending on the host system being run, when executing yocto builds, one might run into the fullowing error:
+```
+ERROR: No space left on device or exceeds fs.inotify.max_user_watches?
+```
+Please check the max_user_watches value on your host system using:
+```
+cat /proc/sys/fs/inotify/max_user_watches
+```
+If the value is set too low (eg: 8192), use the following command to set it properly. Please ensure that you have root/sudo priviledges to do this.
+```
+sudo sysctl fs.inotify.max_user_watches=1000000
+```
+This should solve the problem with No space left on device errors.
+
 ### Install Repo
 ```
 mkdir ~/bin
