@@ -1,16 +1,19 @@
-### Build
+
 [![Build
 Status](https://travis-ci.org/mkilivan/image-builder-raspberrypi.svg?branch=master)](https://travis-ci.org/mkilivan/image-builder-raspberrypi)
-
-### Docker Image
 [![](https://images.microbadger.com/badges/image/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
 "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/mkilivan/image-builder-raspberrypi.svg)](https://microbadger.com/images/mkilivan/image-builder-raspberrypi
 "Get your own version badge on microbadger.com")
 
-### To Run the Docker Image
+### Yocto Image Builder
+This version of yocto is also available on [DockerHub](https://hub.docker.com/r/mkilivan/image-builder-raspberrypi). You can pull the docker image from DockerHub using the command:
 ```
-docker run -ti --volume=[host-src:]container-dest mkilivan/image-builder-raspberrypi
+docker pull mkilivan/image-builder-raspberrypi
+```
+To run the docker image without doing a git pull, use the following:
+```
+docker run -ti --volume=${PWD}/project:/home/yocto/project mkilivan/image-builder-raspberrypi
 ```
 #### Possible Issues
 Depending on the host system being run, when executing yocto builds, one might run into the fullowing error:
