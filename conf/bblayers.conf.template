@@ -14,4 +14,6 @@ BBLAYERS ?= " \
   _BUILD_PATH_/meta-openembedded/meta-filesystems \
   _BUILD_PATH_/meta-virtualization \
   _BUILD_PATH_/meta-raspberrypi \
+  _BUILD_PATH_/meta-chaos/meta-chaos-common \
+  _BUILD_PATH_/meta-chaos-raspberrypi \
   "
