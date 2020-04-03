@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <default revision="thud" remote="origin" />
+  <default revision="warrior" remote="origin" />
 
   <remote name="origin" fetch="git://github.com/mkilivan" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
