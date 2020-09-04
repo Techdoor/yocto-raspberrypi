@@ -8,16 +8,10 @@ default: build
 build:
 	docker build -t $(IMAGE) .
 
-sd-image: build
-	docker run -it \
-		--volume ${CURDIR}:/tmp \
-		$(IMAGE) \
-		bash -c "build.sh"
-
 shell: build
 	docker run -it \
 		--volume ${CURDIR}:/tmp \
 		$(IMAGE) bash
 
-push-image:
+push:
 	docker push $(IMAGE)

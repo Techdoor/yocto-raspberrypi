@@ -23,7 +23,7 @@ docker run --rm --volume `pwd`:/tmp mkilivan/docker-yocto-builder \
 ````
 
 #### Possible Issues
-Depending on the host system being run, when executing yocto builds, one might run into the fullowing error:
+Depending on the host system being run, when executing yocto builds, one might run into the following error:
 ```
 ERROR: No space left on device or exceeds fs.inotify.max_user_watches?
 ```
