@@ -1,5 +1,5 @@
 USER := mkilivan
-REPO := image-builder-raspberrypi
+REPO := docker-yocto-builder
 
 IMAGE := $(USER)/$(REPO)
 
