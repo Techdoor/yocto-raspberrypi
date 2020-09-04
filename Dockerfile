@@ -39,11 +39,4 @@ RUN apt-get install -y sudo
 
 USER build
 
-WORKDIR /home/build
-
-COPY scripts /home/build/scripts
-COPY conf/ /home/build/conf
-
-CMD ./scripts/build.sh
-
-# EOF
+WORKDIR /tmp

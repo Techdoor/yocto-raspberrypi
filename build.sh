@@ -1,7 +1,10 @@
 #!/bin/bash
 
-repo init -u https://github.com/mkilivan/image-builder-raspberrypi.git
-repo sync
+mkdir -p build
+cd build
+
+repo init --depth=1 -u https://github.com/mkilivan/chaos-yocto-manifest.git
+repo sync -c --no-tags --no-clone-bundle
 cd poky
 mkdir -p build/conf/
 sed 's?_BUILD_PATH_?'`pwd`'?' ../conf/bblayers.conf.template > build/conf/bblayers.conf
