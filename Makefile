@@ -12,7 +12,7 @@ sd-image: build
 	docker run -it \
 		--volume ${CURDIR}:/tmp \
 		$(IMAGE) \
-		bash -c "scripts/build.sh"
+		bash -c "build.sh"
 
 shell: build
 	docker run -it \
