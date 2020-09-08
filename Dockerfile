@@ -11,6 +11,9 @@ RUN apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib \
 # Why?
 RUN apt-get install -y libsdl1.2-dev xterm curl
 
+# Required packages for yocto development 
+RUN apt-get install -y tmux libncurses-dev 
+
 # Set up locales
 RUN apt-get -y install locales apt-utils sudo && \
     dpkg-reconfigure locales && \
