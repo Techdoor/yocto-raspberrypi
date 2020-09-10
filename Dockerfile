@@ -40,6 +40,10 @@ RUN groupadd -g 1001 build && \
 
 RUN apt-get install -y sudo
 
+# Git setup
+RUN git config --global user.name yocto_builder
+RUN git config --global user.email yocto@builder.com
+
 USER build
 
 WORKDIR /tmp
