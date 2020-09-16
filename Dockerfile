@@ -15,11 +15,7 @@ RUN apt-get install -y libsdl1.2-dev xterm curl
 RUN apt-get install -y tmux libncurses-dev 
 
 # Set up locales
-RUN apt-get -y install locales apt-utils sudo && \
-    dpkg-reconfigure locales && \
-    locale-gen en_US.UTF-8 && \
-    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-
+RUN apt-get -y install locales apt-utils sudo && dpkg-reconfigure locales && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 ENV LANG en_US.utf8
 
 # Clean up APT when done.
@@ -28,22 +24,20 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Replace dash with bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-# Add "repo" tool (used by many Yocto-based projects)
+# Instal repo
 RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
 RUN chmod a+x /usr/local/bin/repo
 
 # User management
-RUN groupadd -g 1001 build && \
-    useradd -u 1001 -g 1001 -ms /bin/bash build && \
-    usermod -a -G sudo build && \
-    usermod -a -G users build
+RUN groupadd -g 1000 build && useradd -u 1000 -g 1000 -ms /bin/bash build && usermod -a -G sudo build && usermod -a -G users build
 
 RUN apt-get install -y sudo
+
+USER build
+WORKDIR /home/build
 
 # Git setup
 RUN git config --global user.name yocto_builder
 RUN git config --global user.email yocto@builder.com
+RUN git config --global color.ui false
 
-USER build
-
-WORKDIR /tmp
